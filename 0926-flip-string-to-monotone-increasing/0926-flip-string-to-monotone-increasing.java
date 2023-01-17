@@ -1,3 +1,11 @@
+/*>skip 0's until u encounter 1;
+  >count number of ones in count_One(prefix)
+  >any zero that comes after encounter of one can be considered for flipping keep track in flip_count;
+  >if flip_count exceed count_One
+  1. means number of zero exceed count of one;
+  2. its better to flip number of one ;
+
+*/
 class Solution {
     public int minFlipsMonoIncr(String s) {
         if(s.length()<=0||s==null)
