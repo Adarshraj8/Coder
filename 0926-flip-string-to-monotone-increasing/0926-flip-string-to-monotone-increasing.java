@@ -6,6 +6,8 @@
   2. its better to flip number of one and make a function constant ;
   monotone increasing:-means always increasing or remain constant but never decreasing;
     so here flipping count_One will be better choice whenever number on zero exceed count_one;
+    time complexity:-O(N)
+    stack space:-O(1)
 */
 class Solution {
     public int minFlipsMonoIncr(String s) {
