@@ -1,12 +1,12 @@
 class Solution {
     public int minFlipsMonoIncr(String s) {
      //  String sp[] = s.split("");
-               char ch[] = s.toCharArray();
+               //char ch[] = s.toCharArray();
         int flip_count=0;
         int count_One=0;
-        for(int i=0;i<ch.length;i++)
+        for(int i=0;i<s.length();i++)
         {
-            if(ch[i]=='0')
+            if(s.charAt(i)=='0')
             {
                 if(count_One==0){
                     continue;
