@@ -14,13 +14,14 @@ class Solution {
             int frq;
              if(map.containsKey(rd))
              {
-                frq =  map.get(rd)+1;
-                 count +=map.get(rd);
+                frq =  map.get(rd);
+                 count +=frq;
+                 map.put(rd,frq+1);
              }
              else{
-                 frq=1;
+                 map.put(rd,1);
              }
-            map.put(rd,frq);
+           // map.put(rd,frq);
             
         }
         return count;
