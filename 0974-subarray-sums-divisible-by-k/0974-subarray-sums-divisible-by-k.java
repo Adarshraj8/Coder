@@ -9,7 +9,7 @@ class Solution {
              sum +=nums[i];
               int rd = sum%k;
                if(rd<0){
-                  rd=rd+k;
+                  rd=rd+k;//keeping reminder always positive
                }
             int frq;
              if(map.containsKey(rd))
