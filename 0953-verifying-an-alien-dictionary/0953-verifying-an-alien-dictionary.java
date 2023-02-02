@@ -1,7 +1,7 @@
 class Solution {
     public boolean isAlienSorted(String[] words, String order) {
        int alien[] = new int[26];
-        for(int i=0;i<order.length();i++)
+        for(int i=0;i<26;i++)
         {
             alien[order.charAt(i)-'a']=i;
         }
