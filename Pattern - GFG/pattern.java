@@ -30,7 +30,7 @@ class Solution {
     void printDiamond(int size) {
       for(int i=0;i<size;i++)
 	{
-		for(int k=0;k<size-i-1;k++)
+		for(int k=1;k<size-i;k++)
 		{
 			System.out.print(" ");
 		}
