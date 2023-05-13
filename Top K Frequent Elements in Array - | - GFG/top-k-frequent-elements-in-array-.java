@@ -35,7 +35,7 @@ class Solution {
         
         ArrayList<Map.Entry<Integer,Integer>> list = new ArrayList<>(h.entrySet());
         
-        list.sort(new Comparator<Map.Entry<?,?>>()
+       /* list.sort(new Comparator<Map.Entry<?,?>>()
         {
             public int compare(Map.Entry<?,?> a,Map.Entry<?,?> b)
             {
@@ -44,6 +44,12 @@ class Solution {
                 else
                 return((Integer)b.getValue()).compareTo((Integer)a.getValue());
             }
+        });*/
+        list.sort((a,b)->{
+            if(Objects.equals(a.getValue(),b.getValue()))
+            return b.getKey() - a.getKey();
+            else
+            return b.getValue() - a.getValue();
         });
         int store[]=new int[k];
         for(int i=0;i<k;i++)
