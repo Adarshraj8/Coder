@@ -14,8 +14,10 @@ class Solution
 	public static void bubbleSort(int arr[], int n)
     {
         int swap=0;
+         Arrays.sort(arr);
         for(int i=0;i<n-1;i++)
         {
+            boolean flag=false;
             for(int j=0;j<n-1-i;j++)
             {
                 if(arr[j]>arr[j+1])
@@ -23,7 +25,10 @@ class Solution
                     swap = arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=swap;
+                    flag=true;
                 }
+                if(flag==false)
+                break;
             }
         }
     } 
