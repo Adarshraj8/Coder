@@ -43,25 +43,20 @@ class Solution
 	void selectionSort(int arr[], int n)
 	{
 	     
-	     int keep[] = new int[n];
-	     
-	     for(int i=0;i<n;i++)
+	    int min_value=0;
+	     for(int i=0;i<n-1;i++)
 	     {
-	         int min_idx=0;
-	         for(int j=1;j<n;j++)
+	         int min_idx=i;
+	         for(int j=i+1;j<n;j++)
 	         {
 	             if(arr[j]<arr[min_idx])
 	             {
 	                 min_idx=j;
 	             }
 	         }
-	          
-	          keep[i]=arr[min_idx];
-	          arr[min_idx] = Integer.MAX_VALUE;
-	     }
-	     for(int i=0;i<n;i++)
-	     {
-	         arr[i]=keep[i];
-	     }
+	        min_value =arr[min_idx];
+	         arr[min_idx]=arr[i];
+	         arr[i] = min_value;
 	}
+}
 }
