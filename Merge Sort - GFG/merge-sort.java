@@ -60,7 +60,7 @@ class Solution
     void merge(int a[], int l, int m, int r)
     {
         Arrays.sort(a);
-        int n1=m-l+1;
+        int n1=m-l;
         int n2 =r-m;
         int left[] = new int[n1];
         int right[]=new int[n2];
