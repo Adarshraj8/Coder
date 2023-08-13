@@ -45,7 +45,7 @@ class Solution
     static int partition(int arr[], int low, int high)
     {
         int pivot =arr[low];
-        int i=low-1,j=high+1;
+        int i=low-1, j=high+1;
         
         while(true)
         {
@@ -57,13 +57,11 @@ class Solution
                 j--;
             }while(arr[j]>pivot);
             
-            if(i>=j) return j;
+            if(i>=j)return j;
             
             int temp = arr[j];
             arr[j]=arr[i];
             arr[i]=temp;
         }
-        
-    
-}
+    } 
 }
