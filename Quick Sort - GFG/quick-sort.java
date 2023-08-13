@@ -63,6 +63,7 @@ class Solution
             arr[j]=arr[i];
             arr[i]=temp;
         }
-      
-    } 
+        
+    
+}
 }
