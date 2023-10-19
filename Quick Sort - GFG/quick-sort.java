@@ -36,32 +36,40 @@ class Solution
     //Function to sort an array using quick sort algorithm.
     static void quickSort(int arr[], int low, int high)
     {
-        if(low<high){
-        int p = partition(arr,low,high);
-         quickSort(arr,low,p);
-         quickSort(arr,p+1,high);
-    }
+        // code here
+        if(low<high)
+        {
+            int p = partition(arr,low,high);
+            quickSort(arr,low,p-1);
+            quickSort(arr,p+1,high);
+        }
+      
     }
     static int partition(int arr[], int low, int high)
     {
-        int pivot =arr[low];
-        int i=low-1, j=high+1;
-        
-        while(true)
+        // your code here
+       
+        int n=arr.length;
+        int pivot=arr[high];
+        int i=low-1;
+       
+        for(int j=low;j<n;j++)
         {
-            do{
+            if(arr[j]<pivot)
+            {
                 i++;
-            }while(arr[i]<pivot);
-            
-            do{
-                j--;
-            }while(arr[j]>pivot);
-            
-            if(i>=j)return j;
-            
-            int temp = arr[j];
+                
+            int temp =arr[j];
             arr[j]=arr[i];
             arr[i]=temp;
+            }
         }
+        int k = arr[high];
+        arr[high]=arr[i+1];
+        arr[i+1]=k;
+        
+        
+    
+        return i+1;
     } 
 }
