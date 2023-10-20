@@ -13,25 +13,20 @@ class Solution
     //Function to sort the array using bubble sort algorithm.
 	public static void bubbleSort(int arr[], int n)
     {
-        int swap=0;
-         Arrays.sort(arr);
-        for(int i=0;i<n-1;i++)
+        //code here
+        for(int i=0;i<n;i++)
         {
-            boolean flag=false;
-            for(int j=0;j<n-1-i;j++)
+            for(int j=0;j<n-1;j++)
             {
                 if(arr[j]>arr[j+1])
                 {
-                    swap = arr[j];
+                    int swap =arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=swap;
-                    flag=true;
                 }
-                if(flag==false)
-                break;
             }
         }
-    } 
+    }
 }
 
 //{ Driver Code Starts.
