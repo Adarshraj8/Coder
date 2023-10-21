@@ -40,23 +40,22 @@ class Solution
 {
   static void insert(int arr[],int i)
   {
-      insertionSort(arr,i);
+       // Your code here
   }
   //Function to sort the array using insertion sort algorithm.
-  public static void insertionSort(int arr[], int n)
+  public void insertionSort(int arr[], int n)
   {
-     int swap=0;
-       for(int i=1;i<n;i++)
-	   {
-	       int key = arr[i];
-	       int j=i-1;
-	       
-	      while(j>=0 && arr[j]>key)
-	      {
-	          arr[j+1]=arr[j];
-	          j--;
-	      }
-	      arr[j+1]=key;
-	  }
+      //code here
+      for(int i=1;i<n;i++)
+      {
+          int key=arr[i];
+          int j=i-1;
+          while(j>=0&&arr[j]>key)
+          {
+              arr[j+1]=arr[j];
+              j--;
+          }
+          arr[j+1]=key;
+      }
   }
 }
