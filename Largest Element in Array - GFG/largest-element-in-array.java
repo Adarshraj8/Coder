@@ -40,6 +40,7 @@ class Compute {
     {
         for(int i=0;i<n;i++)
         {
+            boolean flag=false;
             for(int j=0;j<n-1;j++)
             {
                 if(arr[j]>arr[j+1])
@@ -47,8 +48,11 @@ class Compute {
                     int swap=arr[j];
                      arr[j+1]=arr[j];
                     arr[j]=swap;
+                    flag=true;
                 }
             }
+            if(flag==false)
+            break;
         }
         int a=arr[n-1];
         return a;
