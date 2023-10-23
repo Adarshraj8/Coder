@@ -38,21 +38,18 @@ class Compute {
     
     public int largest(int arr[], int n)
     {
-        int keep[]=new int[n];
-        for(int i=0;i<n;i++)
-        {
-            int min_idx=0;
-            for(int j=1;j<n;j++)
-            {
-                if(arr[j]<arr[min_idx])
-                {
-                    min_idx=j;
-                }
-            }
-            keep[i]=arr[min_idx];
-            arr[min_idx]=Integer.MAX_VALUE;
-        }
-        int a=keep[n-1];
-        return a;
+       for(int i=1;i<n;i++)
+       {
+           int key=arr[i];
+           int j=i-1;
+           while(j>=0&&arr[j]>key)
+           {
+               arr[j+1]=arr[j];
+               j--;
+           }
+           arr[j+1]=key;
+       }
+       int a=arr[n-1];
+       return a;
     }
 }
