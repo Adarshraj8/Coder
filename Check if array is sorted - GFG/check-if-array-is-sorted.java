@@ -32,10 +32,10 @@ import java.io.*;
 class Solution {
     boolean arraySortedOrNot(int[] arr, int n) {
       
-      for(int i=0;i<n-1;i++)
+      for(int i=1;i<n;i++)
       {
          
-               if(arr[i+1]<arr[i])
+               if(arr[i]<arr[i-1])
                return false;
           
      }
