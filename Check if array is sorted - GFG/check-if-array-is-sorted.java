@@ -31,10 +31,14 @@ import java.io.*;
 
 class Solution {
     boolean arraySortedOrNot(int[] arr, int n) {
-      int[] sortedArray = Arrays.copyOf(arr, n);
-        Arrays.sort(sortedArray);
-         if(Arrays.equals(arr, sortedArray))
-         return true;
-         return false;
+      
+      for(int i=0;i<n-1;i++)
+      {
+         
+              if(arr[i+1]<arr[i])
+              return false;
+          
+      }
+      return true;
     }
     }
