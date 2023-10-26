@@ -32,13 +32,22 @@ import java.io.*;
 class Solution {
     boolean arraySortedOrNot(int[] arr, int n) {
       
-      for(int i=0;i<n-1;i++)
-      {
+    //   for(int i=0;i<n-1;i++)
+    //   {
          
-              if(arr[i+1]<arr[i])
-              return false;
+    //           if(arr[i+1]<arr[i])
+    //           return false;
           
-      }
-      return true;
+    //   }
+    //   return true;
+    
+       int [] sorted =  Arrays.copyOf(arr,n);
+       Arrays.sort(sorted);
+       
+       if(Arrays.equals(arr,sorted))
+       {
+           return true;
+       }
+       return false;
     }
     }
