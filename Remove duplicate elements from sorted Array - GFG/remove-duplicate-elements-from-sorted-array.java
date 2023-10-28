@@ -34,19 +34,18 @@ class Solution {
     int remove_duplicate(int A[],int N){
         // code here
        int count=1;
-        int temp[]=new int[N];
-        temp[0]=A[0];
-            for(int i=1;i<A.length;i++)
+       
+      int idx=0;
+            for(int i=0;i<A.length;i++)
             {
-                if(temp[count-1]!=A[i]){
-               
-                temp[count]=A[i];
-                 count++;
+                 
+                if(A[i]!=A[count-1])
+                {
+                    A[count]=A[i];
+                    count++;
+                
                 }
-            }
-            for(int i=0;i<count;i++)
-            {
-                A[i]=temp[i];
+                
             }
             return count;
     }
