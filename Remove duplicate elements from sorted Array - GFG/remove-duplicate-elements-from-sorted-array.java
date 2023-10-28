@@ -35,8 +35,8 @@ class Solution {
         // code here
        int count=1;
        
-      int idx=0;
-            for(int i=0;i<A.length;i++)
+
+            for(int i=1;i<A.length;i++)
             {
                  
                 if(A[i]!=A[count-1])
