@@ -40,15 +40,13 @@ public class Main {
 class Solution {
     void leftRotate(int[] arr, int n, int d) {
         // code here
-      
      	int temp[] = new int[n];
-     	  if(d<=n){
         for(int i=0;i<n;i++)
 		{
 		    int a = (d+i)%n;
 		     temp[i]=arr[a];
 		}
-    }
+		
 		for(int i=0;i<n;i++)
 		{
 		    arr[i]=temp[i];
