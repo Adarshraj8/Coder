@@ -42,15 +42,12 @@ class Compute {
          // Your code goes here
         //	int N=4;
 	
-	 
-        int sum = 0;
-        for (int i = 0; i < A.length; i++) {
-            sum += A[i];
-        }
-        
-        // The sum of the first N natural numbers is N*(N+1)/2
-        int expectedSum = (N * (N + 1)) / 2;
-        
+	 int sum=0;
+	 for(int i=0;i<N;i++)
+	 {
+	    sum+=A[i]; 
+	 }
+        int expectedSum = (N*(N+1))/2;
         int missingNumber = expectedSum - sum;
         
          return missingNumber;
