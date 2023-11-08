@@ -38,6 +38,7 @@ class Solution {
         if(arr[mid]==k)
         return mid;
         
+        if(arr[mid]>k){
         for(int i=0;i<mid;i++)
         {
             if(arr[i]==k)
@@ -46,13 +47,15 @@ class Solution {
             }
         
         }
- 
+        }
+        
+        if(arr[mid]<k){
         for(int i=mid+1;i<n;i++)
         {
             if(arr[i]==k)
             return i;
         }
-        
+        }
         return -1;
     }
     }
