@@ -32,30 +32,22 @@ class Solution {
     int binarysearch(int arr[], int n, int k) {
         // code here
          int low=0;
-        int high=n;
-        int mid = (low+high)/2;
+        int high=n-1;
         
-        if(arr[mid]==k)
-        return mid;
-        
-        if(arr[mid]>k){
-        for(int i=0;i<mid;i++)
+        while(low<=high)
         {
-            if(arr[i]==k)
-            {
-                return i;
-            }
+            int mid = (low+high)/2;
+            
+             if(arr[mid]==k)
+              return mid;
+             
+             else if(arr[mid]>k)
+             high = mid-1;
+             else
+              low=mid+1;
+        }
         
-        }
-        }
-        
-        if(arr[mid]<k){
-        for(int i=mid+1;i<n;i++)
-        {
-            if(arr[i]==k)
-            return i;
-        }
-        }
         return -1;
+       
     }
-    }
+}
