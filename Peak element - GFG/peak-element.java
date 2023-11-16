@@ -52,17 +52,27 @@ class Solution
 	public int peakElement(int[] arr,int n)
     {
        //add code here.
-       int x=0;
-       int idx=0;
-       int count=0;
-       for(int i=0;i<n;i++)
-       {
-          x = Math.max(arr[i],0);
-          if(x>count){
-           count=x;
-           idx=i;
+      int low=0;
+      int high=n-1;
+     
+      
+      while(low<=high)
+      {
+           
+             int mid=(low+high)/2;
+            if((mid==0 ||arr[mid-1]<=arr[mid])&&(mid==n-1||arr[mid+1]<=arr[mid]))
+            {
+               return mid;
           }
-       }
-       return idx;
+            if(mid<n-1&&arr[mid]<arr[mid+1])
+          {
+              low=mid+1;
+          }
+          else{
+              high=mid-1;
+          }
+        
+      }
+      return -1;
     }
 }
