@@ -35,16 +35,38 @@ public class GFG
 
 class Solution
 {
-    int search(int A[], int l, int h, int key)
+    int search(int A[], int low, int high, int key)
     {
         // l: The starting index
         // h: The ending index, you have to search the key in this range
         // Complete this function
-        for(int i=0;i<A.length;i++)
-        {
-          if(A[i]==key)
-           return i;
-        }
-        return -1;
+       // Arrays.sort(A);
+       
+       if(low>high)
+       return -1;
+       
+       int mid =(low+high)/2;
+       
+       if(A[mid]==key)
+       return mid;
+       
+       if(A[low]<=A[mid])
+       {
+           if(key>=A[low]&&key<=A[mid])
+           {
+               return search(A,low,mid-1,key);
+           }
+           else{
+               return search(A,mid+1,high,key);
+           }
+       }
+       
+       if(key>=A[mid]&&key<=A[high])
+       {
+           return search(A,mid+1,high,key);
+       }
+       else{
+           return search(A,low,mid-1,key);
+       }
     }
 }
