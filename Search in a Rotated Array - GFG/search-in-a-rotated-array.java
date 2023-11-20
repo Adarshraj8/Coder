@@ -60,7 +60,7 @@ class Solution
                return search(A,mid+1,high,key);
            }
        }
-       
+      
        if(key>=A[mid]&&key<=A[high])
        {
            return search(A,mid+1,high,key);
@@ -68,5 +68,6 @@ class Solution
        else{
            return search(A,low,mid-1,key);
        }
-    }
+       }
+    
 }
