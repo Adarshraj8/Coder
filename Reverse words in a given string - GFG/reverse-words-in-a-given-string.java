@@ -29,7 +29,17 @@ class Solution
               String s1="";
 	      
 	           String []arr =   s.split("\\.");
-	           Collections.reverse(Arrays.asList(arr));
+	           //Collections.reverse(Arrays.asList(arr));
+	           int low=0;
+	           int high=arr.length-1;
+	           while(low<high)
+	           {
+	               String temp = arr[high];
+	               arr[high]=arr[low];
+	               arr[low]=temp;
+	               low++;
+	               high--;
+	           }
 	         s1 = String.join(".",arr);
 	           return s1;
     }
