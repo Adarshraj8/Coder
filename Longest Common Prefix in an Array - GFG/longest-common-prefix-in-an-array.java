@@ -33,7 +33,7 @@ class Solution{
           return "-1";
           
            String minstr =arr[0];
-           for(int i=0;i<n;i++)
+           for(int i=1;i<n;i++)
            {
                if(arr[i].length()<minstr.length())
                {
@@ -45,7 +45,7 @@ class Solution{
            for(int i=0;i<minstr.length();i++)
            {
                char current = minstr.charAt(i);
-              for(int j=1;j<n;j++)
+              for(int j=0;j<n;j++)
               {
                   if(arr[j].charAt(i)!=minstr.charAt(i)){
                   return result.length() == 0 ? "-1" : result.toString();
