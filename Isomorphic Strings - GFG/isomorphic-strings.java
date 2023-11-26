@@ -35,42 +35,38 @@ public class Driver {
 class Solution
 {
     //Function to check if two strings are isomorphic.
-    public static boolean areIsomorphic(String str1,String str2)
+    public static boolean areIsomorphic(String s1,String s2)
     {
         // Your code here
         
-      //   if(s1.length()!=s2.length())
-       //  return false;
-        if (str1.length() != str2.length()) {
-            return false;
+       if(s1.length()!=s2.length())
+        return false;
+        
+    HashMap<Character,Character> map1 = new HashMap<>();
+     HashMap<Character,Character> map2 = new HashMap<>();
+        for(int i=0;i<s1.length();i++)
+        {
+              char ch1 = s1.charAt(i);
+              char ch2 = s2.charAt(i);
+             if(map1.containsKey(ch1))
+             {
+                 if(map1.get(ch1)!=ch2)
+                  return false;
+             }
+             else{
+                 map1.put(ch1,ch2);
+             }
+             
+             if(map2.containsKey(ch2))
+             {
+                 if(map2.get(ch2)!=ch1)
+                 return false;
+                 
+             }
+             else{
+                 map2.put(ch2,ch1);
+             }
         }
-
-        HashMap<Character, Character> map1 = new HashMap<>();
-        HashMap<Character, Character> map2 = new HashMap<>();
-
-        for (int i = 0; i < str1.length(); i++) {
-            char char1 = str1.charAt(i);
-            char char2 = str2.charAt(i);
-
-            // Check in map1
-            if (map1.containsKey(char1)) {
-                if (map1.get(char1) != char2) {
-                    return false;
-                }
-            } else {
-                map1.put(char1, char2);
-            }
-
-            // Check in map2
-            if (map2.containsKey(char2)) {
-                if (map2.get(char2) != char1) {
-                    return false;
-                }
-            } else {
-                map2.put(char2, char1);
-            }
-        }
-
         return true;
     }
 }
