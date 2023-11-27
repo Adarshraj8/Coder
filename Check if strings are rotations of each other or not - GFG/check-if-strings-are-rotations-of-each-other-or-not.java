@@ -50,11 +50,8 @@ class Solution
             return false;
         }
 
-        // Concatenate s1 with itself
-        String temp = s1 + s1;
-
-        // Check if s2 is a substring of temp
-        return temp.contains(s2);
+         String temp = s1+s1;
+         return temp.contains(s2);
     }
     
 }
