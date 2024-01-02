@@ -57,7 +57,7 @@ class Solution {
             current=current.next;
         
         }
-        if(current!=null&&current.data==key)
+        if(current!=null&&(current.data^key)==0)
         return true;
         return false;
     }
