@@ -1,7 +1,7 @@
 import requests
 
 def fetch_submissions():
-    url = "https://leetcode.com/api/submissions/"
+    url = "https://leetcode.com/problems/kth-largest-element-in-an-array/"
     response = requests.get(url)
 
     if response.status_code == 200:
