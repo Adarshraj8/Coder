@@ -1,0 +1,27 @@
+name: LeetCode Sync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: LeetCode submission fetch
+        run: |
+          # Add your script to fetch submission from LeetCode here
+          # Ensure that this script retrieves content properly
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "Adarshraj8"
+          git config --global user.email "adarshrajgr2016@gmail.com"
+          git add .
+          git commit -m "Auto update from LeetCode submission"
+          git push
